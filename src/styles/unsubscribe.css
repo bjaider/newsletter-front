@@ -1,0 +1,16 @@
+.unsubscribe-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.unsubscribe-container h1 {
+    font-size: 42px;
+}
+
+.unsubscribe-container p {
+    font-size: 28px;
+}

@@ -1,0 +1,21 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-input-email, .login-input-password {
+    min-width: 350px;
+    margin: 20px 0px;
+}
+
+.login-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.login-form-button {
+    width: 100%;
+}
