@@ -7,6 +7,7 @@ const Unsubscribe = () => {
   let {email} = useParams()
   useEffect(() => {
     handleUnsubscribe()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleUnsubscribe = async () => {

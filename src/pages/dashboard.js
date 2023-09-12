@@ -21,6 +21,7 @@ const Dashboard = () => {
     subject: '',
     emailBody: '',
     attachment: {name: '', file: ''},
+    scheduledDateTime: new Date(),
   }
 
   const validationSchema = Yup.object().shape({
@@ -83,6 +84,7 @@ const Dashboard = () => {
           subject: values.subject,
           html: values.emailBody,
           attachment: values.attachment,
+          scheduledDateTime: values.scheduledDateTime,
         }
         try {
           await axiosInstance.post('/api/newsletter/send', body)
@@ -170,6 +172,8 @@ const Dashboard = () => {
               selectedEmail={selectedEmails}
               setSelectedEmails={setSelectedEmails}
               recipientsData={recipientsData}
+              setFieldValue={setFieldValue}
+              values={values}
             />
 
             <Button

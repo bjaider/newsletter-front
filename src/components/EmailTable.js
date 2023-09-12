@@ -8,8 +8,15 @@ import {
   TableCell,
   Pagination,
 } from '@nextui-org/react'
+import {DateTimePicker} from 'react-rainbow-components'
 
-const EmailTable = ({selectedEmails, setSelectedEmails, recipientsData}) => {
+const EmailTable = ({
+  selectedEmails,
+  setSelectedEmails,
+  recipientsData,
+  setFieldValue,
+  values,
+}) => {
   const [page, setPage] = useState(1)
   const rowsPerPage = 4
 
@@ -24,6 +31,13 @@ const EmailTable = ({selectedEmails, setSelectedEmails, recipientsData}) => {
 
   return (
     <div className="dashboard-emails-table">
+      <DateTimePicker
+        formatStyle="large"
+        value={values.scheduledDateTime}
+        label="Schedule time"
+        onChange={(value) => setFieldValue('scheduledDateTime', value)}
+        borderRadius="semi-rounded"
+      />
       <Table
         color="primary"
         selectionMode="multiple"
